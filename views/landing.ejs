@@ -1,9 +1,83 @@
-<%- include ("partials/header") %>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kurippu</title>
+    <!-- bootstrap only -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <!-- main css -->
+    <link rel="stylesheet" href="/stylesheets/main.css" />
+    <!-- landing css -->
+    <link rel="stylesheet" href="/stylesheets/landing.css" />
+    <!-- font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <img
+      id="bg-image"
+      src="https://images.pexels.com/photos/934062/pexels-photo-934062.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    />
+    <div class="wrapper">
+      <div class="container content">
+        <div id="header">
+          <div id="logo" class="bold-body">KURIPPU</div>
+          <div id="info">
+            <p>Get Organized, Be more productive</p>
+          </div>
+          <div class="container pt-5">
+            <div class="row justify-content-center">
+              <div class="col-md-auto p-1">
+                <a href="#" class="btn btn-lg btn-dark"
+                  >Notes
+                  <div id="footer" class="text-muted">Relieves Stress</div>
+                </a>
+              </div>
+              <div class="col-md-auto p-1">
+                <a href="#" class="btn btn-lg btn-dark"
+                  >ToDos
+                  <div id="footer" class="text-muted">
+                    Keeps Schedules In Track
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<div class="container">
-  <h1 class="bold-body">This is landing page</h1>
-  <a class="body" href="/notes">Notes</a>
-  <a class="body" href="/todos">ToDos</a>
-</div>
-
-<%- include ("partials/footer") %>
+    <!-- JS, Popper.js, and jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
