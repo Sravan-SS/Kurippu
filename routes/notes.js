@@ -1,9 +1,17 @@
 const express = require("express"),
-  router = express.Router();
+  router = express.Router(),
+  Note = require("../models/notes");
 
 // index
 router.get("/", (req, res) => {
-  res.render("notes/index");
+  Note.find({}, (err, notes) => {
+    try {
+      res.render("notes/index", { notes: notes });
+    } catch (err) {
+      res.redirect("back");
+      console.log(err);
+    }
+  });
 });
 
 module.exports = router;
