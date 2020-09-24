@@ -1,104 +1,127 @@
-#bg-image {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: auto;
-  z-index: -10;
-  background-size: cover;
-  -webkit-animation: kenburns-top 30s linear infinite alternate-reverse both;
-  animation: kenburns-top 30s linear infinite alternate-reverse both;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background-color: white;
-  font-family: "Open Sans", sans-serif !important;
+  font-family: "Open Sans";
 }
 
-.wrapper {
-  display: block;
+.header {
+  height: 100vh;
+  background-size: cover;
   position: relative;
-  width: 100%;
-  height: 500px;
-}
-.content {
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 50%;
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
 }
 
-#header {
-  padding-top: 2.5rem;
+.header-image {
+  background-image: url(https://images.pexels.com/photos/934062/pexels-photo-934062.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-position: top;
+}
+
+.text-box {
   text-align: center;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* display: block; */
 }
 
-#logo {
-  border: 0.25rem solid #3b3b3b;
-  border-radius: 0.5rem;
-  display: inline-block;
-  font-size: 5rem;
-  color: #1d1d1d;
-  text-shadow: #747474 0 0 50px;
-  letter-spacing: 0.9rem;
-  padding: 0 3rem;
-}
-
-#info {
-  margin-top: 1.5rem;
-  letter-spacing: 0.1rem;
-  color: #1d1d1d;
-  line-height: 0.75rem;
-  font-weight: 800;
+.heading {
+  color: #000;
   text-shadow: #747474 0 0 20px;
-  font-size: x-large;
+  margin-bottom: 2rem;
 }
 
-#footer {
-  font-size: medium;
+.heading-main {
+  font-family: "Anton";
+  border: 0.25rem solid #000;
+  border-radius: 0.5rem;
+  font-size: 5rem;
+  padding: 0 2.5rem;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  display: block;
+  animation: moveInLeft 0.75s ease-in;
 }
 
-.btn {
-  /* color: #444444; */
-  border-color: #1d1d1d;
-  border-width: 0.2rem;
-  background-color: #1d1d1d;
-  font-size: x-large;
-  line-height: 1.7rem;
-  width: 227px;
+.heading-sub {
+  display: block;
+  text-transform: capitalize;
+  margin-top: 1rem;
+  font-weight: 800;
+  font-size: 1.5rem;
+  animation: moveInRight 0.75s ease-in;
 }
 
-/* animista */
-@-webkit-keyframes kenburns-top {
-  0% {
-    -webkit-transform: scale(1) translateY(0);
-    transform: scale(1) translateY(0);
-    -webkit-transform-origin: 50% 16%;
-    transform-origin: 50% 16%;
+.btn:link,
+.btn:visited {
+  margin: 1rem 0;
+  padding: 0.75rem 1.75rem;
+  text-transform: capitalize;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  display: block;
+  background-color: #313131;
+  animation: fadeIn 0.75s ease-in 0.5s;
+  animation-fill-mode: backwards;
+  transition: all 0.2s;
+}
+
+.btn-text-main {
+  color: rgb(223, 223, 223);
+  font-weight: 800;
+  font-size: 1.25rem;
+  display: block;
+}
+
+.btn-text-sub {
+  color: rgb(199, 199, 199);
+  font-size: 1rem;
+  display: block;
+}
+
+.btn:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+}
+.btn:active {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+}
+
+@keyframes moveInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
   }
-  100% {
-    -webkit-transform: scale(1.25) translateY(-15px);
-    transform: scale(1.25) translateY(-15px);
-    -webkit-transform-origin: top;
-    transform-origin: top;
+  80% {
+    transform: translateX(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
-@keyframes kenburns-top {
-  0% {
-    -webkit-transform: scale(1) translateY(0);
-    transform: scale(1) translateY(0);
-    -webkit-transform-origin: 50% 16%;
-    transform-origin: 50% 16%;
+@keyframes moveInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
   }
-  100% {
-    -webkit-transform: scale(1.25) translateY(-15px);
-    transform: scale(1.25) translateY(-15px);
-    -webkit-transform-origin: top;
-    transform-origin: top;
+  80% {
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
