@@ -17,6 +17,13 @@ body {
 .header-image {
   background-image: url(https://images.pexels.com/photos/934062/pexels-photo-934062.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
   background-position: top;
+  animation: kenburns-top 10s ease-in-out alternate-reverse infinite;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-size: cover;
 }
 
 .text-box {
@@ -25,7 +32,6 @@ body {
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* display: block; */
 }
 
 .heading {
@@ -43,7 +49,7 @@ body {
   letter-spacing: 0.5rem;
   text-transform: uppercase;
   display: block;
-  animation: moveInLeft 0.75s ease-in;
+  animation: moveInLeft 0.75s ease-out;
 }
 
 .heading-sub {
@@ -52,7 +58,7 @@ body {
   margin-top: 1rem;
   font-weight: 800;
   font-size: 1.5rem;
-  animation: moveInRight 0.75s ease-in;
+  animation: moveInRight 0.75s ease-out;
 }
 
 .btn:link,
@@ -64,7 +70,7 @@ body {
   border-radius: 0.5rem;
   display: block;
   background-color: #313131;
-  animation: fadeIn 0.75s ease-in 0.5s;
+  animation: fadeIn 0.5s ease-in 0.5s;
   animation-fill-mode: backwards;
   transition: all 0.2s;
 }
@@ -120,8 +126,20 @@ body {
 @keyframes fadeIn {
   from {
     opacity: 0;
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes kenburns-top {
+  0% {
+    transform: scale(1.2) translateY(-15px);
+    transform-origin: top;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    transform-origin: 50% 16%;
   }
 }
